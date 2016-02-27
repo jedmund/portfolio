@@ -120,8 +120,6 @@ ul {
   }
 
   li {
-    width: $full;
-
     &:last-child {
       margin-bottom: $section-bottom-margin;
     }
@@ -161,10 +159,33 @@ ul {
 
     li {
       margin-bottom: $project-vert-margin;
+
+      &:not(:first-child) .overlay {
+        height: 200px;
+      }
+
+      .placeholder {
+        background: #f0f0f0;
+        border-radius: $image-corner-radius;
+        height: 200px;
+        margin-bottom: $image-bottom-margin;
+
+        &.col-full {
+          height: 400px;
+        }
+      }
     }
 
-    .action {
-      align-items: flex-start;
+    section {
+      margin-bottom: $unit;
+
+      .info {
+        flex-grow: 1;
+      }
+
+      .action {
+        align-items: flex-start;
+      }
     }
 
     .overlay {
@@ -174,7 +195,6 @@ ul {
       height: $project-image-height;
       opacity: 0;
       transition: 0.12s opacity ease-in-out;
-      width: $project-image-width;
       z-index: 2;
     }
   }

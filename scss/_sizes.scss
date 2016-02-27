@@ -1,15 +1,16 @@
 // Atomic Unit
 // ------------------------------------------------------------------------------------------------
-$unit:      8px;
-$margin:    $unit * 5;
+$page-width:            784px;
 
-$fourth:    130px;
-$third:     192px;
-$half:      ($fourth * 2) + $margin;
+$unit:                  8px;
+$margin:                $unit * 5;
+
+$fourth:                ($page-width - $margin * 5) / 4;
+$third:                 ($page-width - $margin * 5) / 3;
+$half:                  ($fourth * 2) + $margin;
 
 // Page Properties
 // ------------------------------------------------------------------------------------------------
-$page-width:            720px;
 $page-corner-radius:    $unit;
 $page-top-margin:       $unit * 6;
 $page-vert-padding:     $unit * 6;
