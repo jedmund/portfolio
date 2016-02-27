@@ -1,0 +1,315 @@
+@import 'reset';
+@import 'bourbon/bourbon';
+
+@import 'colors';
+@import 'sizes';
+@import 'fonts';
+@import 'controls';
+
+html {
+  background: $bg-color;
+  color: $body-text-color;
+  font-family: $font-stack;
+  font-size: $font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $medium;
+}
+
+body {
+  background: $page-color;
+  border-top-left-radius: $page-corner-radius;
+  border-top-right-radius: $page-corner-radius;
+  box-sizing: border-box;
+  margin: $page-top-margin auto 0;
+  padding: $page-vert-padding $page-horz-padding ($page-vert-padding / 2);
+  width: $page-width;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: $medium;
+}
+
+h2 {
+  background-image: url('../img/underline.png');
+  background-repeat: repeat-x;
+  background-position: 0px 22px;
+  background-size: 9px 3px;
+  display: inline;
+  padding-bottom: 6px;
+  text-align: center;
+  width: auto;
+}
+
+header {
+  margin-bottom: $header-bottom-margin;
+
+  .lead {
+    border-radius: $image-corner-radius;
+    margin-top: $header-bottom-margin;
+  }
+}
+
+section {
+  header {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+  }
+
+  footer {
+    background: $expander-color;
+    border-radius: $image-corner-radius;
+    height: 2px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.page {
+  & > header {
+    margin-bottom: $page-vert-padding;
+
+    .picture {
+      $avatar-diameter: $avatar-radius * 2;
+
+      background-image: url('../img/jedmund.jpg');
+      background-size: $avatar-diameter $avatar-diameter;
+      border-radius: $avatar-radius;
+      display: block;
+      height: $avatar-diameter;
+      margin: 0 auto;
+      text-indent: -9999px;
+      width: $avatar-diameter;
+    }
+  }
+}
+
+.home {
+  letter-spacing: -.02em;
+
+  & > section {
+    margin-bottom: $section-bottom-margin;
+  }
+
+  h3 {
+      color: $accent-color;
+      font-size: $big-font-size;
+      line-height: $big-font-size * 2;
+    }
+
+  p {
+    line-height: $font-unit * 5;
+  }
+
+  li {
+    width: $full;
+
+    &:last-child {
+      margin-bottom: $section-bottom-margin;
+    }
+
+    a {
+      display: block;
+
+      &:hover {
+        text-decoration: none;
+
+        .overlay {
+          opacity: 0.24;
+        }
+      }
+    }
+
+    section {
+      display: flex;
+
+      .action {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .projects {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      border-radius: $image-corner-radius;
+      margin-bottom: $image-bottom-margin;
+    }
+
+    li {
+      margin-bottom: $project-vert-margin;
+    }
+
+    .overlay {
+      background: $accent-color;
+      border-radius: $image-corner-radius;
+      position: absolute;
+      height: $project-image-height;
+      opacity: 0;
+      transition: 0.12s opacity ease-in-out;
+      width: $project-image-width;
+      z-index: 2;
+    }
+  }
+
+  .writing {
+    margin-bottom: $writing-bottom-margin;
+
+    h3 {
+      line-height: $big-font-size * 1.4;
+    }
+
+    li {
+      margin-bottom: $article-bottom-margin;
+
+      &:last-child {
+        margin-bottom: $section-bottom-margin;
+      }
+    }
+
+    .pub-info {
+      color: $light-text-color;
+      display: block;
+      margin-bottom: $unit / 2;
+    }
+
+    .brief {
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  .about {
+    overflow: hidden;
+
+    h4 {
+      color: $light-text-color;
+      margin-bottom: $about-header-margin;
+    }
+
+    h5 {
+      margin-bottom: $history-title-bottom;
+    }
+
+    time {
+      color: $light-text-color;
+    }
+
+    .cv p {
+      margin-bottom: $about-bottom-margin;
+    }
+
+    .history {
+      margin-top: 2px; /* Something must be wrong here */
+      margin-bottom: $about-unit-bottom;
+
+      li {
+        margin-bottom: $history-bottom-margin;
+      }
+    }
+
+    .mentions {
+      h5 {
+        line-height: 1.4;
+      }
+      li {
+        margin-bottom: $about-bottom-margin;
+        width: 100%;
+      }
+    }
+
+    .contact {
+      li {
+        margin-bottom: $contact-bottom-margin;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: $tiny-font-size;
+
+  h4 {
+    background: none;
+    display: block;
+    padding-bottom: 0;
+  }
+
+  p {
+    color: $light-text-color;
+    display: block;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+
+.project {
+  img {
+    border-radius: $image-corner-radius;
+    margin-bottom: $project-bottom-margin;
+  }
+
+  footer {
+    margin-top: $project-vert-margin * 2;
+  }
+
+  section {
+    &.top img {
+      margin-bottom: 0;
+    }
+
+    p {
+      line-height: $body-line-height;
+      margin-bottom: $project-bottom-margin;
+
+      &:last-child {
+        margin-bottom: $project-section-margin;
+      }
+    }
+
+    ol {
+      margin-bottom: $project-section-margin;
+    }
+
+    footer {
+      margin: $section-bottom-margin 0;
+    }
+  }
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  h2 {
+    background-image: url('../img/underline@2x.png');
+    background-size: 9px 3px;
+  }
+}
