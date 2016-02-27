@@ -7,3 +7,9 @@ css
 
 # Don't commit Bourbon
 bourbon
+
+# Don't commit fonts to Github
+fonts/*.eot
+fonts/*.svg
+fonts/*.ttf
+fonts/*.woff
