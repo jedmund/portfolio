@@ -2,6 +2,9 @@
 .sass-cache/
 *.css.map
 
+# Sublime Text
+*.sublime-*
+
 # Don't commit compiled CSS
 css
 
