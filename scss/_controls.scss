@@ -45,7 +45,8 @@ button {
 
   &.instagram {
     background-color: $instagram-color;
-    color: white;
+    color: darken($instagram-color, 18%);;
+;
 
     &:hover {
       background-color: darken($instagram-color, 4%);
@@ -54,7 +55,7 @@ button {
 
   &.pinterest {
     background-color: $pinterest-color;
-    color: white;
+    color: darken($pinterest-color, 14%);;
 
     &:hover {
       background-color: darken($pinterest-color, 4%);

@@ -163,6 +163,10 @@ ul {
       margin-bottom: $project-vert-margin;
     }
 
+    .action {
+      align-items: flex-start;
+    }
+
     .overlay {
       background: $accent-color;
       border-radius: $image-corner-radius;
