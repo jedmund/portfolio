@@ -98,3 +98,10 @@ p em {
   color: $accent-color;
   font-style: normal;
 }
+
+.centered {
+  display: block;
+  margin: $unit auto ($unit * 6) !important;
+  text-align: center;
+  width: 80%;
+}
