@@ -163,17 +163,6 @@ ul {
       &:not(:first-child) .overlay {
         height: 200px;
       }
-
-      .placeholder {
-        background: #f0f0f0;
-        border-radius: $image-corner-radius;
-        height: 200px;
-        margin-bottom: $image-bottom-margin;
-
-        &.col-full {
-          height: 400px;
-        }
-      }
     }
 
     section {
@@ -270,6 +259,50 @@ ul {
         margin-bottom: $contact-bottom-margin;
       }
     }
+  }
+}
+
+.project {
+  nav {
+    display: flex;
+    margin-bottom: $unit * 6;
+
+    .project-name,
+    .project-section,
+    .project-link {
+      flex-grow: 1;
+    }
+
+    .project-section {
+      text-align: center;
+    }
+
+    .project-link {
+      text-align: right;
+    }
+  }
+
+  section {
+    overflow: hidden;
+  }
+
+  .top header {
+    margin-bottom: $unit * 2;
+  }
+
+  .bottom {
+    margin-bottom: $unit * 6;
+  }
+}
+
+.placeholder {
+  background: #f0f0f0;
+  border-radius: $image-corner-radius;
+  height: 200px;
+  margin-bottom: $image-bottom-margin;
+
+  &.col-full {
+    height: 400px;
   }
 }
 
