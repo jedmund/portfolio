@@ -259,18 +259,63 @@ ul {
 
 /* Project page */
 .project {
+  footer {
+    margin: $project-vert-margin 0;
+  }
+
   nav {
-    display: flex;
-    margin-bottom: $unit * 6;
+    background: white;
+    display: none;
+    margin-bottom: $unit * 4;
+    padding: 10px 0;
+    
+
+    &.fixed {
+      left: 50%;
+      margin-left: - ($page-width / 2);
+      margin-bottom: 0;
+      padding: 20px 0;
+      position: fixed;
+      top: 0;
+      width: $page-width;
+
+      .inner {
+        padding: 0 40px;
+      }
+    }
+
+    .inner {
+      display: flex;
+      box-sizing: border-box;
+    }
 
     .project-name,
     .project-section,
     .project-link {
+      flex-basis: 0;
       flex-grow: 1;
+      vertical-align: middle;
+    }
+
+    .project-name,
+    .project-link {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .project-section {
       text-align: center;
+
+      h4 {
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+        padding: 8px 0;
+      }
+
+      .items {
+        display: none;
+      }
     }
 
     .project-link {
@@ -278,8 +323,27 @@ ul {
     }
   }
 
+  ol { /* Placeholder */
+    margin-bottom: $project-section-margin;
+  }
+
   section {
     overflow: hidden;
+
+    &#intro {
+      margin-top: $unit * 4;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: $body-line-height;
+      margin-bottom: $project-bottom-margin;
+
+      &:last-child {
+        margin-bottom: $project-section-margin;
+      }
+    }
   }
 
   .top header {
