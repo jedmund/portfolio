@@ -16,3 +16,6 @@ fonts/*.eot
 fonts/*.svg
 fonts/*.ttf
 fonts/*.woff
+
+# Don’t commit PSDs
+*.psd
