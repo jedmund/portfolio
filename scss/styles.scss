@@ -56,11 +56,6 @@ h2 {
 
 header {
   margin-bottom: $header-bottom-margin;
-
-  .lead {
-    border-radius: $image-corner-radius;
-    margin-top: $header-bottom-margin;
-  }
 }
 
 section {
@@ -262,6 +257,7 @@ ul {
   }
 }
 
+/* Project page */
 .project {
   nav {
     display: flex;
@@ -287,7 +283,40 @@ ul {
   }
 
   .top header {
-    margin-bottom: $unit * 2;
+    margin-bottom: 0;
+
+    .container {
+      margin-top: $header-bottom-margin;
+      position: relative;
+
+      &:after {
+        border-radius: $image-corner-radius;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+
+      &.hero:after {
+        width: $lead-image-width;
+        height: $lead-image-height;
+      }
+
+      &.hero.stroked:after {
+        border: $image-border-width solid $image-border-color;
+        width: $lead-image-width - ($image-border-width * 2);
+        height: $lead-image-height - ($image-border-width * 2);
+      }
+
+      img {
+        border-radius: $image-corner-radius;
+      }
+    }
+
+    .placeholder {
+      margin-bottom: 0;
+    }
   }
 
   .bottom {
@@ -325,40 +354,6 @@ footer {
   span {
     display: block;
     text-align: center;
-  }
-}
-
-.project {
-  img {
-    border-radius: $image-corner-radius;
-    margin-bottom: $project-bottom-margin;
-  }
-
-  footer {
-    margin-top: $project-vert-margin * 2;
-  }
-
-  section {
-    &.top img {
-      margin-bottom: 0;
-    }
-
-    p {
-      line-height: $body-line-height;
-      margin-bottom: $project-bottom-margin;
-
-      &:last-child {
-        margin-bottom: $project-section-margin;
-      }
-    }
-
-    ol {
-      margin-bottom: $project-section-margin;
-    }
-
-    footer {
-      margin: $section-bottom-margin 0;
-    }
   }
 }
 
