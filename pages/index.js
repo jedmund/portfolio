@@ -5,14 +5,16 @@
  */
 
 import React, { Component } from 'react';
+import Section from '../components/Section';
 
 export default class extends Component {
 
   render() {
     return (
       <div>
-        <h1>Home Page</h1>
-        <p>Coming soon.</p>
+        <Section className="design" header="I make creative tools"><div /></Section>
+        <Section className="writing" header="I write about design and culture"><div /></Section>
+        <Section className="about" header="I work as a product designer"><div /></Section>
       </div>
     );
   }
