@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import '../reset.styl'
+import '../grid.styl'
 import './Page.styl';
 import Header from '../Header';
 
