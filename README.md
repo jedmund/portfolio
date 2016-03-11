@@ -9,7 +9,7 @@ Install [Node.js](http://nodejs.org)
 sudo apt-get install nodejs build-essential
 ```
 
-Install required packages
+Install required packages via [NPM](http://npmjs.com)
 ```
 npm install
 ```
