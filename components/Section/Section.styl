@@ -1,14 +1,19 @@
 @import "../variables.styl"
 
-section header
-  text-align: center
+section
+  clear: both
+  margin-bottom: page-vert-padding
+
+  header
+    margin-bottom: page-vert-padding
+    text-align: center
 
 h2
   background-image: url('../../static/underline.png')
   background-repeat: repeat-x
   background-position: 0px 22px
   background-size: 9px 3px
-  font-size: font-size-large
+  font-size: font-size-med
   font-weight: font-weight-med
   display: inline
   padding-bottom: 6px
@@ -19,5 +24,5 @@ h2
 (min-resolution: 192dpi)
   h2
     background-image: url('../../static/underline@2x.png')
+    background-position: 0px 22px
     background-size: 9px 3px
-    
