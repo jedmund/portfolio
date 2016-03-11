@@ -1,0 +1,37 @@
+@import '../variables.styl'
+
+vert-padding = (page-vert-padding / 4)
+
+li
+  margin-bottom: (unit * 8)
+
+  h3
+    color: accent-color
+    font-size: font-size-large
+    font-weight: font-weight-med
+    
+  p
+    color: text-color-body
+    font-size: font-size
+    line-height: line-height
+    
+  section
+    display: flex
+    margin-bottom: unit
+    
+    .info
+      align-items: center
+      display: flex
+      margin-top: (unit / -4)
+      flex-grow: 1
+
+    .action
+      align-items: flex-start
+      display: flex
+      justify-content: flex-end
+
+.placeholder
+  background: grey-color
+  border-radius: corner-radius
+  height: 200px
+  margin-bottom: (unit * 2)
