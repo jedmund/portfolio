@@ -5,6 +5,14 @@ p = (unit * 3)
 
 .mention
   background: #f7f7f7
+  cursor: pointer
+  transition: background 0.2s ease-in-out
+  
+  &:hover
+    background: darken(#f7f7f7, 2%)
+    
+    h4
+      text-decoration: underline
   
   &:nth-child(odd)
     float: left
