@@ -1,7 +1,11 @@
 @import "../variables.styl"
 
 .article
+  display: block
   margin-bottom: (unit * 8)
+  
+  &:nth-child(even)
+    margin-left: half + margin
   
   h3
     color: accent-color

@@ -14,7 +14,7 @@ class Article extends Component {
     const { title, summary, date, readTime } = this.props;
 
     return (
-      <li className="article col-3-4">
+      <li className="article col-1-2">
         <h3>
           <a href="#" target="_blank">
             {title}
