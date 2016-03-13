@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import './ProjectList.styl';
 
 class ProjectList extends Component {
 
