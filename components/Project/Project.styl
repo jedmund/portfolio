@@ -2,8 +2,19 @@
 
 vert-padding = (page-vert-padding / 4)
 
-li
+.project
   margin-bottom: (unit * 8)
+
+  &:hover button
+    opacity: 1
+
+  & > a
+    display: block
+    margin-bottom: (unit * 2)
+    
+  button
+    opacity: 0
+    transition: opacity 0.18s ease-in-out
 
   h3
     color: accent-color
@@ -15,7 +26,7 @@ li
     font-size: font-size
     line-height: line-height
     
-  section
+  .name-line
     display: flex
     margin-bottom: unit
     
@@ -33,5 +44,4 @@ li
 .placeholder
   background: grey-color
   border-radius: corner-radius
-  height: 200px
-  margin-bottom: (unit * 2)
+  height: 230px

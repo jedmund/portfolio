@@ -1,0 +1,33 @@
+@import '../variables.styl'
+
+.omnibus.project
+  overflow: hidden
+  
+  &:hover button
+    opacity: 0
+
+  & > a
+    margin-bottom: 0
+  
+  nav
+    s = (unit * 1.25)
+      
+    li
+      border-bottom: 2px solid grey-color
+      padding: s 0
+      
+      &:hover button
+        opacity: 1
+        
+      &:last-child
+        border-bottom: 0
+      
+      a
+        display: flex
+        font-weight: font-weight-med
+        
+        span
+          align-items: center
+          display: flex
+          flex-grow: 1
+          
