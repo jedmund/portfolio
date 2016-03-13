@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import ProjectList from '../components/ProjectList';
 import OmnibusProject from '../components/OmnibusProject';
 import Project from '../components/Project';
+import Bio from '../components/Bio';
 import Section from '../components/Section';
 
 const projects = [
@@ -60,7 +61,7 @@ export default class extends Component {
         <Section className="writing" header="I write about design and culture">
         </Section>
         <Section className="about" header="I work as a product designer">
-          <about />
+          <Bio />
         </Section>
       </div>
     );
