@@ -1,5 +1,5 @@
 {
-	"private": true,
-	"name": "ArticleList",
-	"main": "./ArticleList.jsx"
+  "private": true,
+  "name": "ArticleList",
+  "main": "./ArticleList.jsx"
 }
