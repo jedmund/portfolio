@@ -5,7 +5,7 @@
  */
 
 export default {
-  title: '@jedmund',
+  title: 'jedmund',
   description: 'The works of Justin Edmund',
   googleAnalyticsId: 'UA-XXXXX-X',
 };
