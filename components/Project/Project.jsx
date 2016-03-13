@@ -24,7 +24,7 @@ class Project extends Component {
           <div className="overlay"></div>
           <div className="placeholder"></div>
         </a>
-        <section>
+        <header className="name-line">
           <div className="info">
             <a href="#" target="_blank">
               <h3>{name}</h3>
@@ -35,7 +35,7 @@ class Project extends Component {
               <Button className="grey" title="See project" />
             </a>
           </div>
-        </section>
+        </header>
         <p>{about}</p>
       </li>
     );
