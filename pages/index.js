@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import ProjectList from '../components/ProjectList';
+import OmnibusProject from '../components/OmnibusProject';
 import Project from '../components/Project';
 import Section from '../components/Section';
 
@@ -16,9 +17,22 @@ const projects = [
   }, {
     "name": "Foundation",
     "about": "Share your story with Foundation, a platform for creators to document, collaborate and publish their work to the world."
-  }, {
+  }
+];
+
+const omnibus = [
+ {
     "name": "Pinterest",
-    "about": "Pinterest is a place to discover and save creative ideas that inspire you."
+    "about": "Pinterest is a place to discover and save creative ideas that inspire you.",
+    "projects": [
+      {
+        "name": "Place Pins"
+      }, {
+        "name": "Rich Pins"
+      }, {
+        "name": "Other projects" // Team, Search & Discovery, Growth, Analytics
+      }
+    ]
   }
 ];
 
@@ -29,6 +43,7 @@ export default class extends Component {
         <Section className="design" header="I make creative tools">
           <ProjectList>
             { this.renderProjects() }
+            { this.renderOmnibusProjects() }
           </ProjectList>
         </Section>
         <Section className="writing" header="I write about design and culture">
@@ -43,5 +58,10 @@ export default class extends Component {
   renderProjects() {
     return projects.map((project, i) => 
       <Project i={i} name={project.name} about={project.about} />)
+  }
+
+  renderOmnibusProjects() {
+    return omnibus.map((o, i) => 
+      <OmnibusProject i={i} name={o.name} about={o.about} projects={o.projects} />)
   }
 }
