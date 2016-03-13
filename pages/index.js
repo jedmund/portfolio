@@ -8,6 +8,8 @@ import React, { Component } from 'react';
 import ProjectList from '../components/ProjectList';
 import OmnibusProject from '../components/OmnibusProject';
 import Project from '../components/Project';
+import ArticleList from '../components/ArticleList';
+import Article from '../components/Article';
 import MentionCardList from '../components/MentionCardList';
 import MentionCard from '../components/MentionCard';
 import Bio from '../components/Bio';
@@ -35,8 +37,27 @@ const projects = [
   }
 ];
 
+const articles = [
+  {
+    "title": "Growing Up",
+    "date": "Aug 2014",
+    "readTime": "7 min",
+    "summary": "As a kid, I spent most of my time between two worlds. My youngest years were spent in a small suburb in between Queens and Long Island in New York City. It wasn’t rich, but it wasn’t poor."
+  }, {
+    "title": "The Tools That Shape Us",
+    "date": "Mar 2014",
+    "readTime": "4 min",
+    "summary": "It’s hard to find a designer that is satisfied. As designers, we rely on our deep dissatisfaction with the world around us to keep moving forward. We create, hoping that every day, we’ve made the world a little better than how we found it."
+  }, {
+    "title": "Fear",
+    "date": "Mar 2013",
+    "readTime": "3 min",
+    "summary": "Everyone is afraid of something. It could be spiders, or clowns, or the inevitable heat death of the universe. For most people, fear runs much deeper. Fear is much realer."
+  }, 
+];
+
 const mentions = [
- {
+  {
     "title": "Revision Path #113",
     "sourceUrl": "http://revisionpath.com/justin-edmund/",
     "sourceType": "Podcast",
@@ -83,6 +104,9 @@ export default class extends Component {
           </ProjectList>
         </Section>
         <Section className="writing" header="I write about design and culture">
+          <ArticleList>
+            { this.renderArticles() }
+          </ArticleList>
         </Section>
         <Section className="about" header="I work as a product designer">
           <Bio />
@@ -102,6 +126,11 @@ export default class extends Component {
         return <Project i={i} name={p.name} about={p.about} />
       }
     });
+  }
+
+  renderArticles() {
+    return articles.map((a, i) =>
+      <Article title={a.title} summary={a.summary} readTime={a.readTime} date={a.date} />)
   }
 
   renderMentions() {
