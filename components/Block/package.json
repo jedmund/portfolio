@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"name": "Block",
+	"main": "./Block.jsx"
+}

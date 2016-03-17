@@ -2,28 +2,19 @@
 
 Working repository for a personal website refresh
 
-### Requirements
+### Setup
 
-[Sass](http://http://sass-lang.com/)
+Install [Node.js](http://nodejs.org)
 ```
-gem install sass
-```
-
-[Bourbon](http://bourbon.io/)
-```
-gem install bourbon
+sudo apt-get install nodejs build-essential
 ```
 
-### Installation
-
-Install Bourbon into `scss` directory
+Install required packages via [NPM](http://npmjs.com)
 ```
-bourbon install
+npm install
 ```
 
-Compile SCSS
+Run
 ```
-sass --watch scss:css
+npm start
 ```
-
-### Deployment
