@@ -7,7 +7,7 @@ class Project extends Component {
   static propTypes = {
     about: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    i: PropTypes.number.isRequired
+    index: PropTypes.number
   };
 
   render() {
@@ -15,8 +15,9 @@ class Project extends Component {
   }
 
   renderProject() {
-    const { name, about, i } = this.props;
-    const classes = this.assignClasses(i)
+    const { name, about, index } = this.props;
+    const classes = this.assignClasses(index)
+    const url = this.makeLink()
 
     return (
       <li className={classes}>

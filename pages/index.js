@@ -123,7 +123,7 @@ export default class extends Component {
       if ("projects" in p) {
         return <OmnibusProject i={i} name={p.name} about={p.about} projects={p.projects} />
       } else {
-        return <Project i={i} name={p.name} about={p.about} />
+        return <Project key={i} index={i} name={p.name} about={p.about} />
       }
     });
   }
