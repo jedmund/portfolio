@@ -1,19 +1,13 @@
-/**
- * React Static Boilerplate
- * https://github.com/koistya/react-static-boilerplate
- * Copyright (c) Konstantin Tarkus (@koistya) | MIT license
- */
-
-import React, { Component } from 'react';
-import ProjectList from '../components/ProjectList';
-import OmnibusProject from '../components/OmnibusProject';
-import Project from '../components/Project';
-import ArticleList from '../components/ArticleList';
-import Article from '../components/Article';
-import MentionCardList from '../components/MentionCardList';
-import MentionCard from '../components/MentionCard';
-import Bio from '../components/Bio';
-import Section from '../components/Section';
+import React, { Component } from 'react'
+import ProjectList from '../components/ProjectList'
+import OmnibusProject from '../components/OmnibusProject'
+import Project from '../components/Project'
+import ArticleList from '../components/ArticleList'
+import Article from '../components/Article'
+import MentionCardList from '../components/MentionCardList'
+import MentionCard from '../components/MentionCard'
+import Bio from '../components/Bio'
+import Section from '../components/Section'
 
 const projects = [
   {
