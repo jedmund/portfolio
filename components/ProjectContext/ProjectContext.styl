@@ -1,0 +1,37 @@
+@import "../variables.styl"
+
+.project nav
+  background: bg-color
+  left: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+  
+  
+  .inner
+    background: white
+    box-sizing: border-box
+    display: flex
+    margin: 0 auto
+    padding: (unit * 2) page-horz-padding
+    width: page-width
+    
+    .project-name,
+    .project-picker,
+    .project-link
+      flex-basis: 0
+      flex-grow: 1
+      vertical-align: middle
+      
+    .project-name,
+    .project-link
+      display: flex
+      flex-direction: column
+      justify-content: center
+      
+    .project-picker
+      text-align: center
+      
+    .project-link
+      text-align: right
