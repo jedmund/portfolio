@@ -7,22 +7,28 @@ section
   header
     margin-bottom: page-vert-padding
     text-align: center
+    
+  img
+    margin-top: page-vert-padding
 
 h2
-  background-image: url('../../static/underline.png')
-  background-repeat: repeat-x
-  background-position: 0px 22px
-  background-size: 9px 3px
   font-size: font-size-med
   font-weight: font-weight-med
   display: inline
-  padding-bottom: 6px
   width: auto
+  
+  &.underlined
+    background-image: url('../../static/underline.png')
+    background-repeat: repeat-x
+    background-position: 0px 22px
+    background-size: 9px 3px
+    padding-bottom: 6px
+    
   
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi)
-  h2
+  h2.underlined
     background-image: url('../../static/underline@2x.png')
     background-position: 0px 22px
     background-size: 9px 3px
