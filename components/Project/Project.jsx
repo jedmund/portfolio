@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import Button from '../Button';
-import './Project.styl';
+import React, { Component, PropTypes } from 'react'
+import Button from '../Button'
+import Link from '../Link'
+import './Project.styl'
 
 class Project extends Component {
 
@@ -21,18 +22,18 @@ class Project extends Component {
 
     return (
       <li className={classes}>
-        <a href="#">
+        <a href={url} onClick={Link.handleClick}>
           <div className="overlay"></div>
           <div className="placeholder"></div>
         </a>
         <header className="name-line">
           <div className="info">
-            <a href="#" target="_blank">
+            <a href={url} onClick={Link.handleClick}>
               <h3>{name}</h3>
             </a>
           </div>
           <div className="action col-1-4">
-            <a href="#" target="_blank">
+            <a href={url} onClick={Link.handleClick}>
               <Button className="grey" title="See project" />
             </a>
           </div>
@@ -52,6 +53,16 @@ class Project extends Component {
     }
 
     return classes.join(" ")
+  }
+
+  makeLink() {
+    const prefix = "made"
+
+    return ["", prefix, this.makeSlug()].join("/")
+  }
+
+  makeSlug() {
+    return this.props.name.replace(/ /g, "-").toLowerCase()
   }
 }
 
