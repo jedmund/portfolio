@@ -1,21 +1,18 @@
 @import "../variables.styl"
 
 .project nav
-  background: bg-color
-  left: 0
+  background: white
+  box-sizing: border-box
+  margin: 0 auto
+  padding: (unit * 3) 0
   position: fixed
   top: 0
-  width: 100%
+  width: page-width - (page-horz-padding * 2)
   z-index: 10
   
   
   .inner
-    background: white
-    box-sizing: border-box
     display: flex
-    margin: 0 auto
-    padding: (unit * 2) page-horz-padding
-    width: page-width
     
     .project-name,
     .project-picker,
