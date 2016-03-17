@@ -7,7 +7,6 @@ class OmnibusProject extends Component {
   static propTypes = {
     about: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    i: PropTypes.number.isRequired
   };
 
   render() {
@@ -15,7 +14,7 @@ class OmnibusProject extends Component {
   }
 
   renderOmnibus() {
-    const { name, about, projects, i } = this.props;
+    const { name, about, projects } = this.props;
 
     return (
       <li className="omnibus project col-full">
