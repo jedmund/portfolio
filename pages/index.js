@@ -121,7 +121,7 @@ export default class extends Component {
   renderProjects() {
     return projects.map(function (p, i) {
       if ("projects" in p) {
-        return <OmnibusProject i={i} name={p.name} about={p.about} projects={p.projects} />
+        return <OmnibusProject key={i} name={p.name} about={p.about} projects={p.projects} />
       } else {
         return <Project key={i} index={i} name={p.name} about={p.about} />
       }
@@ -130,11 +130,11 @@ export default class extends Component {
 
   renderArticles() {
     return articles.map((a, i) =>
-      <Article title={a.title} summary={a.summary} readTime={a.readTime} date={a.date} />)
+      <Article key={i} title={a.title} summary={a.summary} readTime={a.readTime} date={a.date} />)
   }
 
   renderMentions() {
     return mentions.map((m, i) =>
-      <MentionCard title={m.title} source={m.source} sourceUrl={m.sourceUrl} sourceType={m.sourceType} date={m.date} />)
+      <MentionCard key={i} title={m.title} source={m.source} sourceUrl={m.sourceUrl} sourceType={m.sourceType} date={m.date} />)
   }
 }
