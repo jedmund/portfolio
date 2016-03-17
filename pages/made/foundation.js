@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import '../../components/common.styl'
-import Image from '../../components/Image'
+
 import Block from '../../components/Block'
+import Image from '../../components/Image'
+import ProjectContext from '../../components/ProjectContext'
 import Section from '../../components/Section'
 
 export default class extends Component {
 
   render() {
+    const name = "Foundation"
+    const url = "http://build.onfoundation.com/"
+
+    const sections = [
+      "Intro",
+      "Strategy",
+      "Storytelling",
+      "Collaboration",
+      "Publishing",
+      "Native",
+      "Availability"
+    ]
+
     const hero = {
         "1x": "../../static/projects/foundation/hero.png",
         "2x": "../../static/projects/foundation/hero@2x.png"
@@ -14,6 +29,7 @@ export default class extends Component {
 
     return (
       <Section className="foundation project" header="Foundation" image={hero} underlined>
+        <ProjectContext name={name} sections={sections} url={url} />
         <Section id="intro" header="Intro">
           <Block>
               <p className="col-1-2 left after">Foundation is a documentation platform that helps creative people tell the story of their work to the world.</p>
