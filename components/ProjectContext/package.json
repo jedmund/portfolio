@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"name": "ProjectContext",
+	"main": "./ProjectContext.jsx"
+}
