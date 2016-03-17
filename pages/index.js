@@ -98,17 +98,17 @@ export default class extends Component {
   render() {
     return (
       <div>
-        <Section className="design" header="I make creative tools">
+        <Section className="design" header="I make creative tools" underlined>
           <ProjectList>
             { this.renderProjects() }
           </ProjectList>
         </Section>
-        <Section className="writing" header="I write about design and culture">
+        <Section className="writing" header="I write about design and culture" underlined>
           <ArticleList>
             { this.renderArticles() }
           </ArticleList>
         </Section>
-        <Section className="about" header="I work as a product designer">
+        <Section className="about" header="I work as a product designer" underlined>
           <Bio />
           <MentionCardList>
             { this.renderMentions() }
