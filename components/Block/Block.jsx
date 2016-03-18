@@ -4,7 +4,6 @@ import './Block.styl';
 class Block extends Component {
 
   static propTypes = {
-    children: PropTypes.element.isRequired
   };
 
   render() {
