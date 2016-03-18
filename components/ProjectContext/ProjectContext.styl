@@ -1,8 +1,9 @@
 @import "../variables.styl"
 
-.project nav
+section.project nav
   background: white
   box-sizing: border-box
+  // display: none
   margin: 0 auto
   padding: (unit * 3) 0
   position: fixed
@@ -10,6 +11,8 @@
   width: page-width - (page-horz-padding * 2)
   z-index: 10
   
+  &.visible
+    display: block
   
   .inner
     display: flex
