@@ -35,6 +35,9 @@ ul
   font-size: font-size-med
   list-style-type: none
 
+.disabled
+  cursor: wait !important
+
 .project > img
   margin-bottom: unit * 3
 
@@ -43,7 +46,6 @@ ul
 
   .picture
     avatar-diameter = avatar-radius * 2
-    
     background-image: avatar-url
     background-size: avatar-diameter avatar-diameter
     border-radius: avatar-radius
@@ -172,6 +174,10 @@ vert-padding = (page-vert-padding / 4)
   border-radius: corner-radius
   height: 230px
 
+  img
+    border-radius: corner-radius
+    margin: 0
+
 button
   border: none
   border-radius: corner-radius
@@ -181,9 +187,6 @@ button
   padding: (unit) (unit * 1.5)
   transition: background-color 0.12s ease-in-out,
               color 0.12s ease-in-out
-
-  &:hover
-    cursor: pointer
 
   &.grey
     background-color: grey-color
