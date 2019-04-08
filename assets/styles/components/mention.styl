@@ -1,0 +1,45 @@
+.mention
+  background: card-color
+  cursor: pointer
+  transition: background 0.2s ease-in-out
+  
+  &:hover
+    background: darken(#f7f7f7, 2%)
+  
+  &:nth-child(odd)
+    float: left
+    margin-right: page-horz-padding
+
+    +mobile()
+      float: none
+      margin-right: 0
+  
+  a
+    display: flex
+    flex-direction: column
+    font-size: font-size
+    line-height: line-height
+    min-height: (card-height - (mention-padding * 2))
+    padding: mention-padding
+
+    +mobile()
+      display: block
+      font-size: font-size-small
+ 
+  h4
+    display: block
+    flex-grow: 2
+    
+    cite
+      font-style: normal
+  
+  footer
+    color: #ccc
+    flex-grow: 0
+    font-weight: font-weight-med
+    
+    .source:after
+      content: " · "
+
+    .source-type:after
+      content: " · "

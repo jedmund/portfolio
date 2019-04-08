@@ -1,0 +1,162 @@
+// Base
+@import 'reset.styl'
+@import 'blocks.styl'
+@import 'fonts.styl'
+@import 'grid.styl'
+@import 'variables.styl'
+
+// Components
+@import 'components/bio.styl'
+@import 'components/card.styl'
+@import 'components/header.styl'
+@import 'components/history.styl'
+@import 'components/mention.styl'
+@import 'components/notice.styl'
+@import 'components/project.styl'
+
+html
+  background: bg-color
+  color: text-color-body
+  font-family: font-stack
+  font-size: font-unit
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+    font-size: mobile-font-unit
+
+
+body
+  background: page-color
+  border-top-left-radius: page-corner-radius
+  border-top-right-radius: page-corner-radius
+  box-sizing: border-box
+  margin: page-top-margin auto 0
+  padding: page-vert-padding page-horz-padding (page-vert-padding / 2)
+  width: page-width
+
+  +mobile()
+    m = unit * 3
+    margin: m m 0 m
+    width: auto
+  
+h1, h2, h3, h4, h5, h6, button {
+  letter-spacing: letter-spacing
+}
+
+h2
+  font-size: font-size-med
+  font-weight: font-weight-med
+  display: inline
+  width: auto
+
+  +mobile()
+    font-size: font-size-large
+  
+  &.underlined
+    background-image: url('images/underline.png')
+    background-repeat: repeat-x
+    background-position: 0px 22px
+    background-size: 9px 3px
+    padding-bottom: 6px
+
+p
+  line-height: line-height
+  margin-bottom: unit * 3
+  
+  &:last-child
+    margin-bottom: 0
+  
+ul
+  list-style-type: none
+
+.disabled
+  cursor: wait !important
+
+section
+  clear: both
+  margin-bottom: page-vert-padding
+
+  +mobile()
+    margin-bottom: page-vert-padding * 3
+
+  & > header
+    margin-bottom: page-vert-padding
+    text-align: center
+
+
+
+button
+  border: none
+  border-radius: corner-radius
+  display: block
+  font: font-weight-med font-size font-stack
+  letter-spacing: letter-spacing
+  padding: (unit) (unit * 1.5)
+  transition: background-color 0.12s ease-in-out,
+              color 0.12s ease-in-out
+
+  &.grey
+    background-color: grey-color
+    color: text-color-body
+
+    &:hover
+      color: darken(text-color-body, 4%)
+      background-color: darken(grey-color, 4%)
+  
+  &.blue
+    background-color: twitter-button-color
+    color: twitter-text-color
+
+.social
+  display: block
+
+  .buttons
+    display: flex
+
+    button
+      height: (unit * 6)
+
+      &.blue
+        margin-right: (unit * 2)
+        width: (unit * 28)
+
+      &.grey
+        width: (unit * 14)
+
+.cv
+  margin-bottom: margin
+
+h3 
+  color: text-color-light
+  font-weight: font-weight-med
+  font-size: font-size-med
+  margin-bottom: margin
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi)
+  h2.underlined
+    background-image: url('images/underline@2x.png')
+    background-position: 0px 22px
+    background-size: 9px 3px
+    
+//   body
+//     m = unit * 3
+//     width: auto
+//     margin: m m 0 m
+
+
+
+
+//   @media (min-width: screen-sm-min)
+//     .Layout
+//       width: screen-sm-min - 18px
+
+//   @media (min-width: screen-md-min)
+//     .Layout
+//       width: screen-md-min - 22px
+
+//   @media (min-width: screen-lg-min)
+//     .Layout
+//       width: screen-lg-min - 30px

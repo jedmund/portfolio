@@ -1,0 +1,36 @@
+.history
+    float: right
+    font-size: font-size-med
+
+    +mobile()
+      float: inherit
+      margin-bottom: (margin * 2)
+
+    h3
+      margin-bottom: (unit * 2)
+
+      +mobile()
+        margin-bottom (unit * 6)
+    
+    li
+      margin-bottom: (unit * 2)
+
+      +mobile()
+          font-size: font-size
+          margin-bottom: (unit * 6)
+
+      h4
+        font-weight: font-weight-med
+        margin-bottom: (unit / 2)
+
+        &.facebook
+          color: facebook-color
+
+        &.pinterest
+          color: pinterest-color
+
+        &.cmu
+          color: cmu-color
+
+      .years
+        color: text-color-light

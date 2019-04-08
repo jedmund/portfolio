@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jedmund/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jedmund/portfolio/issues"
+  },
+  "homepage": "https://github.com/jedmund/portfolio#readme",
+  "devDependencies": {
+    "rupture": "^0.7.1",
+    "stylus": "^0.54.5"
+  }
+}

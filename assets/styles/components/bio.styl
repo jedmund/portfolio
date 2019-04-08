@@ -1,0 +1,32 @@
+.bio
+  margin-bottom: margin
+
+  +mobile()
+    margin-bottom: (margin * 2)
+
+  a
+    color: accent-color
+    font-weight: font-weight-med
+    
+    &:hover
+      text-decoration: underline
+    
+  em
+    color: accent-color
+    font-style: normal
+    font-weight: font-weight-med
+    display: inline
+  
+  p
+    color: text-color-body
+    font-size: font-size-med
+    line-height: line-height
+    margin-bottom: (unit * 2)
+
+    +mobile()
+      font-size: font-size
+      margin-bottom: (unit * 6)
+
+
+    &:last-child
+      margin-bottom: 0

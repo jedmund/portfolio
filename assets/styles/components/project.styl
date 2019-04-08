@@ -1,0 +1,63 @@
+vert-padding = (page-vert-padding / 4)
+
+.project
+  margin-bottom: (unit * 8)
+
+  &:hover button
+    opacity: 1
+
+  & > a
+    display: block
+
+  & > img
+    margin-bottom: unit * 3
+
+  & > header
+    align-items: center
+    display: flex
+    margin: unit 0
+
+    .name
+      flex-grow: 1
+
+    +mobile()
+      display: block
+      margin: (unit * 5) 0
+
+    h3
+      margin: auto 0
+
+  img
+    border-radius: corner-radius
+
+    +mobile()
+      border-radius: mobile-corner-radius
+      width: 100%
+  
+  button
+    opacity: 0
+    transition: opacity 0.18s ease-in-out
+
+    +mobile()
+      display: none
+
+  h3
+    color: accent-color
+    font-size: font-size-large
+    font-weight: font-weight-med
+
+    +mobile()
+      font-size: font-size-xlarge
+  
+  p
+    color: text-color-body
+    font-size: font-size
+    line-height: line-height
+
+  .action
+    align-items: flex-start
+    display: flex
+    justify-content: flex-end
+
+    +mobile()
+      display: block
